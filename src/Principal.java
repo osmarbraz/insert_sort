@@ -11,11 +11,13 @@
  * @author Osmar de Oliveira Braz Junior
  */
 public class Principal {
-   
+  
     /**
-     * Ordenação por Insercao 
+     * Ordenação por Insercao.
      * Slide 44
-     **/
+     * @param A Vetor a ser ordenado
+     * @param n Quantidade de elementos do vetor
+     */
     public static void ordenaPorInsercao(int A[], int n) {        
         for (int j = 1; j <= n; j++) {                              //c1 * n
             int chave = A[j];                                       //c2 * n-1
