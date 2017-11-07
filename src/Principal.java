@@ -14,6 +14,8 @@ public class Principal {
   
     /**
      * Ordenação por Insercao.
+     * Complexidade no pior caso Theta(n^2)
+     * Complexidade no caso m~edio/esperado Theta(n log n)
      * Slide 44
      * @param A Vetor a ser ordenado
      * @param n Quantidade de elementos do vetor
