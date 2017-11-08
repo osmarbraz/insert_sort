@@ -5,6 +5,7 @@
  * Disciplinas: Projeto e Análise de Algoritmos
  * Prof Alexandre Gonçalves da Silva 
  * Baseado nos slides da aula 18/08/2017 
+ * Classificação por Inserção/InsertSort
  */
 
 /**
