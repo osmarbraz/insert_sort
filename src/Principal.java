@@ -9,7 +9,7 @@
  *
  * Página 12 Cormen 3 ed
  *
- * HeapSort por Inserção/InsertSort
+ * Algoritmo InsertSort/Ordenação por Inserção
  *
  * Atenção:
  * Vetor em java inicia em 0, os algoritmos consideram início em 1.
@@ -24,7 +24,7 @@
 public class Principal {
   
     /**
-     * Ordenação por Insercao.
+     * Ordenação por Inserção.
      * 
      * Inicialmente, pega os dois primeiros elementos de um vetor, ou seja, posições 0 e 1
      * 1. Atribui o elemento na posição 1 como chave
@@ -34,15 +34,15 @@ public class Principal {
      * 2. Repete o processo até o último elemento do vetor     
      * 
      * Complexidade no pior caso Theta(n^2)
-     * Complexidade no caso m~edio/esperado Theta(n log n)
-     * Slide 11
+     * Complexidade no caso médio/esperado Theta(n log n)
+     * 
      * @param A Vetor a ser ordenado
      * @param n Quantidade de elementos do vetor
      */
     public static void ordenaPorInsercao(int A[], int p, int n) {        
         for (int j = p; j <= n; j++) {                                   //c1 * n
             int chave = A[j-1];                                         //c2 * n-1
-            //Inserir A[j] dentro da sequencia ordenada A[1..j-1]
+            //Inserir A[j] dentro da sequência ordenada A[1..j-1]
             //Compara chave com elementos posicionados antes no vetor(j-1)
             //Para se pelo menos uma das situações ocorrer:
             //Alcançar o início do vetor(i>=0) ou a elemento anterior for maior que a chave
@@ -53,7 +53,7 @@ public class Principal {
                 //Decrementa o contador até o inicio do vetor
                 i = i - 1;                                              //c6 * Somatorio(2 até n)tj-1
             } 
-            // posicao de insercao
+            //posição de inserção
             A[i + 1 - 1] = chave;                                       //c7 * n - 1
         }
     }
@@ -66,13 +66,12 @@ public class Principal {
         //Fim do vetor
         int r = A.length;
 
-        System.out.println(">>> Inserção <<<");
+        System.out.println(">>> Algoritmo InsertSort/Ordenação por Inserção <<<");
         System.out.println("Original: ");
         for (int i = 0; i < r; i++) {
             System.out.println((i+1) + " - " + A[i]);
         }
-
-        //ordenaPorInsercao(A, r);
+        
         ordenaPorInsercao(A, 1, r);
 
         System.out.println("Depois: ");
