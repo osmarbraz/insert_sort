@@ -40,7 +40,7 @@ public class Principal {
      * @param n Quantidade de elementos do vetor
      */
     public static void ordenaPorInsercao(int A[], int p, int n) {        
-        for (int j = p; j <= n; j++) {                                   //c1 * n
+        for (int j = p; j <= n; j++) {                                  //c1 * n
             int chave = A[j-1];                                         //c2 * n-1
             //Inserir A[j] dentro da sequência ordenada A[1..j-1]
             //Compara chave com elementos posicionados antes no vetor(j-1)
