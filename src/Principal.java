@@ -23,39 +23,39 @@
  */
 public class Principal {
   
-    /**
+     /**
      * Ordenação por Inserção.
-     * 
+     *
      * Inicialmente, pega os dois primeiros elementos de um vetor, ou seja, posições 0 e 1
-     * 1. Atribui o elemento na posição 1 como chave
-     * Compara a chave com todos os elementos cujos respectivos índices sejam inferiores
-     *    - Até que encontre um menor valor menor que o da chave; OU
-     *    - O início do vetor seja atingido.
-     * 2. Repete o processo até o último elemento do vetor     
-     * 
-     * Complexidade no pior caso Theta(n^2)
-     * Complexidade no caso médio/esperado Theta(n log n)
+     * 1. Atribui o elemento na posição 1 como chave 
+     *    Compara a chave com todos os elementos cujos respectivos índices sejam inferiores 
+     *      - Até que encontre um menor valor menor que o da chave; OU 
+     *      - O início do vetor seja atingido. 
+     * 2. Repete o processo até o último elemento do vetor
+     *
+     * Complexidade de tempo no pior caso Theta(n^2) 
+     * Complexidade de tempo no caso médio/esperado O(n^2) 
+     * Complexidade de tempo no melhor caso O(n)
      * 
      * @param A Vetor a ser ordenado
-     * @param p Posição inicial do vetor
-     * @param n Posição final do vetor(Quantidade de elementos)
+     * @param n Quantidade de elementos do vetor
      */
-    public static void ordenaPorInsercao(int A[], int p, int n) {        
-        for (int j = p; j <= n; j++) {                                  //c1 * n
-            int chave = A[j-1];                                         //c2 * n-1
+    public static void ordenaPorInsercao(int A[], int n) {        
+        for (int j = 2; j <= n; j++) {                                 //c1 * n
+            int chave = A[j-1];                                        //c2 * n-1
             //Inserir A[j] dentro da sequência ordenada A[1..j-1]
             //Compara chave com elementos posicionados antes no vetor(j-1)
             //Para se pelo menos uma das situações ocorrer:
             //Alcançar o início do vetor(i>=0) ou a elemento anterior for maior que a chave
-            int i = j - 1;                                              //c3 * n-1
-            while ((i >= p) && (A[i-1] > chave)) {                      //c4 * Somatorio(2 até n)tj
+            int i = j - 1;                                             //c3 * n-1
+            while ((i > 0) && (A[i-1] > chave)) {                      //c4 * Somatorio(2 até n)tj
                 //Desloca os elementos para abrir espa;o
-                A[i + 1 - 1] = A[i-1];                                  //c5 * Somatorio(2 até n)tj-1
+                A[i + 1 - 1] = A[i - 1];                               //c5 * Somatorio(2 até n)tj-1
                 //Decrementa o contador até o inicio do vetor
-                i = i - 1;                                              //c6 * Somatorio(2 até n)tj-1
+                i = i - 1;                                             //c6 * Somatorio(2 até n)tj-1
             } 
             //posição de inserção
-            A[i + 1 - 1] = chave;                                       //c7 * n - 1
+            A[i + 1 - 1] = chave;                                      //c7 * n - 1
         }
     }
 
@@ -73,7 +73,7 @@ public class Principal {
             System.out.println((i+1) + " - " + A[i]);
         }
         
-        ordenaPorInsercao(A, 1, r);
+        ordenaPorInsercao(A, r);
 
         System.out.println("Depois: ");
         for (int i = 0; i < r; i++) {
