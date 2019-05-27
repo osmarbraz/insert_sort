@@ -37,7 +37,8 @@ public class Principal {
      * Complexidade no caso médio/esperado Theta(n log n)
      * 
      * @param A Vetor a ser ordenado
-     * @param n Quantidade de elementos do vetor
+     * @param p Posição inicial do vetor
+     * @param n Posição final do vetor(Quantidade de elementos)
      */
     public static void ordenaPorInsercao(int A[], int p, int n) {        
         for (int j = p; j <= n; j++) {                                  //c1 * n
