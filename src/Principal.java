@@ -7,7 +7,7 @@
  *
  * Baseado nos slides 27 da aula 04/08/2017 e slides 11 da aula 18/08/2017  
  *
- * Página 12 Thomas H. Cormen 3 ed
+ * Página 18 Thomas H. Cormen 3 ed
  *
  * Algoritmo InsertSort/Ordenação por Inserção
  *
